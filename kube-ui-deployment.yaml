@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kube-ui-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: kube-ui
+  template:
+    metadata:
+      labels:
+        run: kube-ui
+    spec:
+      containers:
+      - name: ui00
+        image: chetangsanghi/kube-ui-service:0.1
+        ports:
+        - containerPort: 80
