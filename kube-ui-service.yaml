@@ -5,8 +5,8 @@ metadata:
 spec:
   ports:
     - port: 80                               # Containers port exposed
-      targetPort: 80                     # Pods port
+      targetPort: 8080                     # Pods port
   selector:
     run: my-ui                    
-  type: NodeIP
+  type: NodePort 
 
